@@ -2,7 +2,7 @@ import React from 'react';
 import { Chord } from "tonal"
 import * as Key from "tonal-key";
 import './App.css';
-import {Switch, Route, Link} from 'react-router-dom'
+import {Switch, Route} from 'react-router-dom'
 import Song from './Song'
 import Poem from './Poem'
 import Saved from './Saved'
