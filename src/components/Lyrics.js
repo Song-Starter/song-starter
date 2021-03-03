@@ -1,5 +1,6 @@
 import React, { Component }  from 'react';
 import './Song.css';
+import {Link} from 'react-router-dom'
 // import { fetchPoem } from '../network-calls'
 
 class Lyrics extends Component {
@@ -30,12 +31,13 @@ class Lyrics extends Component {
 
   render(){
     const lyricsLines = this.state.short.map(line => {
-      return <p>{line}</p>
+      return <p key={Date.now()}>{line}</p>
     })
     return (
       <div className="Lyrics">
         <div className="lyric-display">{lyricsLines}</div>
         <p>"{this.state.title}" by {this.state.author}</p>
+        <Link to="/poem">see full poem</Link>
       </div>
     );
   }
