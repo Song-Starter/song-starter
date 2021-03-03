@@ -10,9 +10,9 @@ MVP
 
 
 APIs and Libraries
-- Tonal.js: Key and Chords modules.
-- PoetryDB: Search call, 'random' and 'linecount'. Possibly 'lines' to allow users to input search term.
-- Howler.js: Howl and Howler objects to play audio. Functions: play, pause, and possibly loop, duration.
+- Tonal.js: Key and Chords modules. [Tonaljs](https://github.com/tonaljs/v2)
+- PoetryDB: Search call, 'random' and 'linecount'. Possibly 'lines' to allow users to input search term. [PoetryDB](https://github.com/thundercomb/poetrydb/blob/master/README.md)
+- Howler.js: Howl and Howler objects to play audio. Functions: play, pause, and possibly loop, duration.[Howler.js](https://github.com/goldfire/howler.js#documentation)
 - Web Audio API: Functions: play, pause, stop.
 
 Extensions:
