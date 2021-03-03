@@ -2,12 +2,22 @@ import React from 'react';
 import { Chord } from "tonal"
 import * as Key from "tonal-key";
 import './App.css';
+import {Switch, Route} from 'react-router-dom'
+import Song from './Song'
+import Poem from './Poem'
+import Saved from './Saved'
+import Header from './Header'
 
 function App() {
   const keyChords = Key.chords("C major")
   return (
     <div className="App">
-      <h1>{keyChords}</h1>
+      <Header />
+      <Switch>
+        <Route exact path="/" component={ Song }/>
+        <Route path="/poem" component={ Poem }/>
+        <Route path="/saved" component={ Saved }/>
+      </Switch>
     </div>
   );
 }
