@@ -1,6 +1,6 @@
 import React from 'react';
-import { Chord } from "tonal"
-import * as Key from "tonal-key";
+// import { Chord } from "tonal"
+// import * as Key from "tonal-key";
 import './App.css';
 import {Switch, Route} from 'react-router-dom'
 import Song from './Song'
@@ -9,7 +9,6 @@ import Saved from './Saved'
 import Header from './Header'
 
 function App() {
-  const keyChords = Key.chords("C major")
   return (
     <div className="App">
       <Header />

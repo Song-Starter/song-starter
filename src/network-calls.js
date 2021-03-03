@@ -1,15 +1,12 @@
-import { cleanup } from "@testing-library/react"
-
-export const getPoem = () => {
+export const fetchPoem = () => {
   fetch('https://poetrydb.org/random/1/title,lines,author')
     .then(response => response.json())
-    .then(data => console.log(data[0]))
+    .then(data => {return data[0]})
 }
 
-const cleanData = (data) => {
-  const title = data.title
-  const author = data.author
-  const short = data.lines
-  const full = data.lines
-  return {title, author, short, full}
-}
+// const cleanData = (data) => {
+//   return {title: data.title,
+//         author: data.author,
+//         short: [data.lines[0], data.lines[1], data.lines[2], data.lines[3],],
+//         full: data.lines}
+// }

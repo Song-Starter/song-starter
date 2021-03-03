@@ -1,0 +1,9 @@
+.Lyrics {
+  display: flex;
+  flex-direction: column;
+}
+
+.lyrics-display {
+  display: flex;
+  flex-direction: column;
+}
