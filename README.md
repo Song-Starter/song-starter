@@ -1,6 +1,6 @@
 # Song-Starter
 
-Hate starting new songs? Get started.
+Hate starting new songs? Get started!
 
 Starting a new song can be hard. Your lyrics feel uninspired. You keep falling into the same chord progressions. It's too hard to be original. Let the app do the work for you.
 
@@ -10,12 +10,13 @@ MVP
 
 
 APIs and Libraries
-- Tonal.js
-- PoetryDB
-- Howler.js
-- Web Audio API
+- Tonal.js: Key and Chords modules.
+- PoetryDB: Search call, 'random' and 'linecount'. Possibly 'lines' to allow users to input search term.
+- Howler.js: Howl and Howler objects to play audio. Functions: play, pause, and possibly loop, duration.
+- Web Audio API: Functions: play, pause, stop.
 
 Extensions:
+- User find poetry containing certain word.
 - User can play chords by clicking them.
 - User can set tempo for chords to play.
 - User can choose to have chords play once, twice, or four times per measure.
