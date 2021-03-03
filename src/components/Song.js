@@ -3,11 +3,11 @@ import './Song.css';
 import Lyrics from './Lyrics'
 import Progression from './Progression'
 
-const Song = () => {
+const Song = ({ lyrics }) => {
   return (
     <div className="Song">
       <h1>Song</h1>
-      <Lyrics />
+      <Lyrics lyrics={lyrics}/>
       <Progression />
     </div>
   );
