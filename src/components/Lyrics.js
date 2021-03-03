@@ -34,7 +34,6 @@ class Lyrics extends Component {
     })
     return (
       <div className="Lyrics">
-        <h1>Lyrics</h1>
         <div className="lyric-display">{lyricsLines}</div>
         <p>"{this.state.title}" by {this.state.author}</p>
       </div>
