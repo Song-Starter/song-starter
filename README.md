@@ -4,9 +4,9 @@ Hate starting new songs? Get started.
 
 Starting a new song can be hard. Your lyrics feel uninspired. You keep falling into the same chord progressions. It's too hard to be original. Let the app do the work for you.
 
-Generate a randomized set of four chords.
-Show 4 lines of random poem.
-User can save chord/poem sets as "song".
+MVP
+- User clicks a button and sees a set of four random chords, and four lines of poetry.
+- User can save chord/poem sets as "song".
 
 
 APIs and Libraries
