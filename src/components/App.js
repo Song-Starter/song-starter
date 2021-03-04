@@ -15,7 +15,7 @@ class App extends Component {
     this.state = {
       key: "",
       lyrics: "",
-      progression: "",
+      progression: [],
     }
   }
 
@@ -24,6 +24,13 @@ class App extends Component {
     .then(data => this.setState({
       lyrics: data})
     )
+    this.getChordProgression()
+  }
+
+  getChordProgression = () => {
+    this.setState({
+      progression: []
+    })
   }
 
   render(){
