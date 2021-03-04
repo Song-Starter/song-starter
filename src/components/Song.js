@@ -14,7 +14,10 @@ const Song = ({ lyrics, progression }) => {
   }else{
     return (
       <div className="Song">
-        <h1>Song</h1>
+        <h1>Let's get started!</h1>
+        <p>Select a "Key".</p>
+        <p>Choose "Major" or "Minor".</p>
+        <p>Click "New Song".</p>
       </div>
     );
   }

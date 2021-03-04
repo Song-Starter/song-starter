@@ -3,12 +3,13 @@ h1 {
 }
 
 .title {
-  font-size: 4vw;
+  font-family: 'Amatic SC', cursive, sans-serif;
+  font-size: 5vw;
 }
 
 .Header {
   background-color: #2C323A;
-  height: 20%;
+  height: 15vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,7 +18,7 @@ h1 {
 
 .NavBar, .SavedNav {
   width: 90%;
-  height: 2.5rem;
+  height: 3vw;
   background-color: #24282E;
   display: flex;
   justify-content: center;
