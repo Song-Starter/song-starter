@@ -57,7 +57,7 @@ class App extends Component {
   render(){
     return (
       <div className="App">
-        <Header createNewSong={this.createNewSong}/>
+        <Header createNewSong={this.createNewSong} saveSong={this.saveSong}/>
         <Switch>
           <Route exact path="/"   
           render={() => {
