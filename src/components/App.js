@@ -14,8 +14,7 @@ class App extends Component {
     super()
     this.state = {
       key: "",
-      major: true,
-      minor: false,
+      majmin: "",
       lyrics: "",
       progression: [],
     }
