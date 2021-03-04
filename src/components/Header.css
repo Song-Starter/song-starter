@@ -1,0 +1,44 @@
+h1 {
+  margin: 0 0 5px 0;
+}
+
+.title {
+  font-size: 4vw;
+}
+
+.Header {
+  background-color: #2C323A;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.NavBar, .SavedNav {
+  width: 90%;
+  height: 2.5rem;
+  background-color: #24282E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#key {
+  margin: 0 2% 0 0.5%;
+  background-color: #2C323A;
+  color: #8B92A0;
+  border: 2px solid #8B92A0;
+}
+
+input {
+  margin: 0 0.5% 0 2%;
+}
+
+button {
+  margin: 0 2%;
+  padding: 0.5%;
+  background-color: #2C323A;
+  color: #8B92A0;
+  border: 2px solid #8B92A0;
+}

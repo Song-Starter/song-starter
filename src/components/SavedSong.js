@@ -4,12 +4,15 @@ import {Link} from 'react-router-dom'
 
 const SavedSong = ({ lyrics, progression, showSavedSong }) => {
   if(lyrics && progression){
+    const previewChords = progression[0].map(chord => {
+      return <p>{chord}</p>
+    })
     return (
       <div className="SavedSong">
         <p>{lyrics.title}</p>
-        <p>{progression}</p>
+        <div className="preview-chords">{previewChords}</div>
         <Link to="/">
-          <button onClick={() => showSavedSong(lyrics, progression)}>Show Song</button>
+          <button className="showsong-button" onClick={() => showSavedSong(lyrics, progression)}>Show Song</button>
         </Link>
       </div>
     );

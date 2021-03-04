@@ -1,9 +1,23 @@
 .Lyrics {
   display: flex;
   flex-direction: column;
+  border-radius: 50px;
+  background: linear-gradient(315deg, #24282E, #1A1E23);
+  box-shadow: -20px -20px 30px #24282E,
+             20px 20px 30px #1A1E23;
+  margin: 3% 5% 5% 5%;
 }
 
 .lyrics-display {
+  margin: 3%;
   display: flex;
   flex-direction: column;
+}
+
+.poetry-deets {
+  margin: 2%;
+}
+
+.poetry-deets a {
+  text-decoration: underline;
 }

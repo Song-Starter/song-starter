@@ -7,7 +7,6 @@ const Song = ({ lyrics, progression }) => {
   if(lyrics && progression){
     return (
       <div className="Song">
-        <h1>Song</h1>
         <Lyrics lyrics={lyrics}/>
         <Progression progression={progression}/>
       </div>

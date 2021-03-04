@@ -9,9 +9,12 @@ const Lyrics = ({ lyrics }) => {
     })
     return (
       <div className="Lyrics">
-        <div className="lyric-display">{lyricsLines}</div>
-        <p>"{lyrics.title}" by {lyrics.author}</p>
-        <Link to="/poem">see full poem</Link>
+        <div className="lyrics-display">{lyricsLines}</div>
+        <div className="poetry-deets">
+          <p>"{lyrics.title}" by {lyrics.author}</p>
+          <Link to="/poem" >see full poem</Link>
+        </div>
+
       </div>
     );  
   }else{
