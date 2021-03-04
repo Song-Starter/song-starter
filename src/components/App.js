@@ -32,6 +32,13 @@ class App extends Component {
     this.getChordProgression(key, majmin)
   }
 
+  showSavedSong = (savedLyrics, savedProgression) => {
+    this.setState({
+      lyrics: savedLyrics,
+      progression: savedProgression
+    })
+  }
+
   getChordProgression = (key, majmin) => {
     const songKey = Key.triads(`${key} ${majmin}`)
     let chordArray = []
@@ -69,7 +76,7 @@ class App extends Component {
           }}/>
           <Route path="/saved"
             render={() => {
-              return <Saved savedArray={ this.state.saved }/>
+              return <Saved savedArray={ this.state.saved } showSavedSong={this.showSavedSong}/>
           }}/>
         </Switch>
       </div>

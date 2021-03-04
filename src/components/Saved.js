@@ -2,10 +2,10 @@ import React from 'react';
 import './Saved.css';
 import SavedSong from './SavedSong'
 
-const Saved = ({ savedArray }) => {
+const Saved = ({ savedArray, showSavedSong }) => {
   if (savedArray.length) {
       const songsToRender = savedArray.map(song => {
-      return <SavedSong lyrics={song.lyrics} progression={song.progression}/>})
+      return <SavedSong lyrics={song.lyrics} progression={song.progression} showSavedSong={showSavedSong}/>})
     return (
       <div className="Saved">
         { songsToRender }

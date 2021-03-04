@@ -1,13 +1,13 @@
 import React from 'react';
 import './Saved.css';
 
-const SavedSong = ({ lyrics, progression }) => {
+const SavedSong = ({ lyrics, progression, showSavedSong }) => {
   if(lyrics && progression){
     return (
       <div className="SavedSong">
         <p>{lyrics.title}</p>
         <p>{progression}</p>
-        <button>Show Song</button>
+        <button onClick={() => showSavedSong(lyrics, progression)}>Show Song</button>
       </div>
     );
   }else{
