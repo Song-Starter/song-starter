@@ -44,6 +44,12 @@ class App extends Component {
     })
   }
 
+  saveSong = () => {
+    this.setState({
+      saved: [...this.state.saved, this.state]
+    })
+  }
+
   render(){
     return (
       <div className="App">

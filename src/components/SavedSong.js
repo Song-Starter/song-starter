@@ -1,15 +1,12 @@
 import React from 'react';
-import './Song.css';
-import Lyrics from './Lyrics'
-import Progression from './Progression'
+import './Saved.css';
 
 const SavedSong = ({ lyrics, progression }) => {
   if(lyrics && progression){
     return (
       <div className="SavedSong">
-        <h1>SavedSong</h1>
-        <Lyrics lyrics={lyrics}/>
-        <Progression progression={progression}/>
+        <p>{lyrics.title}</p>
+        <p>{progression}</p>
       </div>
     );
   }else{

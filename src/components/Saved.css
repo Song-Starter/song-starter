@@ -1,0 +1,9 @@
+.Saved {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.SavedSong {
+  display: flex;
+  flex-direction: column;
+}
