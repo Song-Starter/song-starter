@@ -33,6 +33,12 @@ class App extends Component {
 
   getChordProgression = (key, majmin) => {
     console.log(Key.chords(`${key} ${majmin}`))
+    const songKey = Key.chords(`${key} ${majmin}`)
+    let chordArray = []
+    for(let i = 0; i < 4; i++) {
+      chordArray.push(songKey[Math.floor(Math.random() * 6)])
+    }
+    console.log(chordArray)
     // this.setState({
     //   progression: []
     // })
