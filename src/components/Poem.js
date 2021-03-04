@@ -9,10 +9,10 @@ const Poem = ({lyrics}) => {
     })
     return (
       <div className="Lyrics">
-        <Link to="/">Back to Song</Link>
-        <div className="lyric-display">{fullPoem}</div>
+        <Link to="/" className="back-song">Back to Song</Link>
+        <div className="poem-display">{fullPoem}</div>
         <p>"{lyrics.title}" by {lyrics.author}</p>
-        <Link to="/">Back to Song</Link>
+        <Link to="/" className="back-song">Back to Song</Link>
       </div>
     );  
   }else{

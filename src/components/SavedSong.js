@@ -9,7 +9,7 @@ const SavedSong = ({ lyrics, progression, showSavedSong }) => {
     })
     return (
       <div className="SavedSong">
-        <p>{lyrics.title}</p>
+        <p className="preview-title">{lyrics.title}</p>
         <div className="preview-chords">{previewChords}</div>
         <Link to="/">
           <button className="showsong-button" onClick={() => showSavedSong(lyrics, progression)}>Show Song</button>

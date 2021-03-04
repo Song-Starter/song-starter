@@ -3,12 +3,13 @@ h1 {
 }
 
 .title {
-  font-size: 4vw;
+  font-family: 'Amatic SC', cursive, sans-serif;
+  font-size: 5vw;
 }
 
 .Header {
   background-color: #2C323A;
-  height: 20%;
+  height: 15vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,11 +18,26 @@ h1 {
 
 .NavBar, .SavedNav {
   width: 90%;
-  height: 2.5rem;
+  height: 3vw;
   background-color: #24282E;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.key-container {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+
+.qual-container {
+  align-items: center;
+  display: flex;
+  width: 60%;
+  justify-content: left;
 }
 
 #key {
@@ -41,4 +57,21 @@ button {
   background-color: #2C323A;
   color: #8B92A0;
   border: 2px solid #8B92A0;
+}
+
+@media screen and (max-width: 600px){
+  .Header {
+    height: 30vh;
+  }
+  .title {
+    font-size: 5vh;
+  }
+  .NavBar, .SavedNav {
+    width: 90%;
+    height: 8vh;
+  }
+  .key-container, .qual-container{
+    display: inline;
+    text-align: center;
+  }
 }
