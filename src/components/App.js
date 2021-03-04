@@ -17,6 +17,7 @@ class App extends Component {
       majmin: "",
       lyrics: "",
       progression: [],
+      saved: []
     }
   }
 
@@ -31,6 +32,13 @@ class App extends Component {
     this.getChordProgression(key, majmin)
   }
 
+  showSavedSong = (savedLyrics, savedProgression) => {
+    this.setState({
+      lyrics: savedLyrics,
+      progression: savedProgression
+    })
+  }
+
   getChordProgression = (key, majmin) => {
     const songKey = Key.triads(`${key} ${majmin}`)
     let chordArray = []
@@ -43,10 +51,20 @@ class App extends Component {
     })
   }
 
+  saveSong = () => {
+    const songObj = {
+      lyrics: this.state.lyrics,
+      progression: this.state.progression
+    }
+    this.setState({
+      saved: [...this.state.saved, songObj]
+    })
+  }
+
   render(){
     return (
       <div className="App">
-        <Header createNewSong={this.createNewSong}/>
+        <Header createNewSong={this.createNewSong} saveSong={this.saveSong}/>
         <Switch>
           <Route exact path="/"   
           render={() => {
@@ -56,7 +74,10 @@ class App extends Component {
             render={() => {
             return <Poem lyrics={ this.state.lyrics }/>
           }}/>
-          <Route path="/saved" component={ Saved }/>
+          <Route path="/saved"
+            render={() => {
+              return <Saved savedArray={ this.state.saved } showSavedSong={this.showSavedSong}/>
+          }}/>
         </Switch>
       </div>
     ); 

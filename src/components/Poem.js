@@ -1,5 +1,6 @@
 import React from 'react';
 import './Poem.css';
+import {Link} from 'react-router-dom'
 
 const Poem = ({lyrics}) => {
   if(lyrics){
@@ -8,8 +9,10 @@ const Poem = ({lyrics}) => {
     })
     return (
       <div className="Lyrics">
+        <Link to="/">Back to Song</Link>
         <div className="lyric-display">{fullPoem}</div>
         <p>"{lyrics.title}" by {lyrics.author}</p>
+        <Link to="/">Back to Song</Link>
       </div>
     );  
   }else{
