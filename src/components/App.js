@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import { Chord } from "tonal"
-// import * as Key from "tonal-key";
+import * as Key from "tonal-key";
 import './App.css';
 import {Switch, Route} from 'react-router-dom'
 import Song from './Song'
@@ -14,27 +14,44 @@ class App extends Component {
     super()
     this.state = {
       key: "",
+      majmin: "",
       lyrics: "",
-      progression: "",
+      progression: [],
     }
   }
 
-  createNewSong = () => {
+  createNewSong = (key, majmin) => {
     fetchPoem()
     .then(data => this.setState({
-      lyrics: data})
+      key: key,
+      majmin: majmin,
+      lyrics: data,
+      })
     )
+    this.getChordProgression(key, majmin)
+  }
+
+  getChordProgression = (key, majmin) => {
+    console.log(Key.chords(`${key} ${majmin}`))
+    const songKey = Key.chords(`${key} ${majmin}`)
+    let chordArray = []
+    for(let i = 0; i < 4; i++) {
+      chordArray.push(songKey[Math.floor(Math.random() * 6)])
+    }
+    this.setState({
+      progression: [chordArray]
+    })
   }
 
   render(){
-        console.log("this.state", this.state.lyrics)
+        console.log("this.state", this.state)
     return (
       <div className="App">
         <Header createNewSong={this.createNewSong}/>
         <Switch>
           <Route exact path="/"   
           render={() => {
-          return <Song lyrics={ this.state.lyrics }/>
+          return <Song lyrics={ this.state.lyrics } progression={ this.state.progression }/>
           }}/>
           <Route path="/poem" 
             render={() => {
