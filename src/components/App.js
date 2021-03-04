@@ -45,8 +45,12 @@ class App extends Component {
   }
 
   saveSong = () => {
+    const songObj = {
+      lyrics: this.state.lyrics,
+      progression: this.state.progression
+    }
     this.setState({
-      saved: [...this.state.saved, this.state]
+      saved: [...this.state.saved, songObj]
     })
   }
 
@@ -63,7 +67,10 @@ class App extends Component {
             render={() => {
             return <Poem lyrics={ this.state.lyrics }/>
           }}/>
-          <Route path="/saved" component={ Saved }/>
+          <Route path="/saved"
+            render={() => {
+              return <Saved savedArray={ this.state.saved }/>
+          }}/>
         </Switch>
       </div>
     ); 
