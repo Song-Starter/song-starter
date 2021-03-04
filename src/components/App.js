@@ -23,20 +23,23 @@ class App extends Component {
   createNewSong = (key, majmin) => {
     fetchPoem()
     .then(data => this.setState({
-      lyrics: data})
+      key: key,
+      majmin: majmin,
+      lyrics: data,
+      })
     )
-    this.getChordProgression()
+    this.getChordProgression(key, majmin)
   }
 
-  getChordProgression = () => {
-    console.log(Chord.notes("CMaj7"))
+  getChordProgression = (key, majmin) => {
+    console.log(Key.chords(`${key} ${majmin}`))
     // this.setState({
     //   progression: []
     // })
   }
 
   render(){
-        console.log("this.state", this.state.lyrics)
+        console.log("this.state", this.state)
     return (
       <div className="App">
         <Header createNewSong={this.createNewSong}/>
