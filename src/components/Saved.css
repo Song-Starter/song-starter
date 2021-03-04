@@ -22,3 +22,34 @@
 .showsong-button {
   margin: 5px;
 }
+
+@media screen and (max-width: 600px){
+  .Saved {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .SavedSong {
+    justify-content: center;
+    height: 150px;
+  }
+
+  .preview-title {
+    height: 3rem;
+    overflow: scroll;
+  }
+  
+  .preview-chords {
+    height: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .SavedSong p {
+    margin: 0;
+  }
+  
+  .showsong-button {
+    margin-top: auto;
+  }
+
+}

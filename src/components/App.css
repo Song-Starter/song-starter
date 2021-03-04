@@ -4,7 +4,8 @@
   margin: auto;
   background-color: #24282E;
   color: #8B92A0;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
 }
 
 a {

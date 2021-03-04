@@ -25,6 +25,21 @@ h1 {
   align-items: center;
 }
 
+.key-container {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+
+.qual-container {
+  align-items: center;
+  display: flex;
+  width: 60%;
+  justify-content: left;
+}
+
 #key {
   margin: 0 2% 0 0.5%;
   background-color: #2C323A;
@@ -42,4 +57,21 @@ button {
   background-color: #2C323A;
   color: #8B92A0;
   border: 2px solid #8B92A0;
+}
+
+@media screen and (max-width: 600px){
+  .Header {
+    height: 30vh;
+  }
+  .title {
+    font-size: 5vh;
+  }
+  .NavBar, .SavedNav {
+    width: 90%;
+    height: 8vh;
+  }
+  .key-container, .qual-container{
+    display: inline;
+    text-align: center;
+  }
 }

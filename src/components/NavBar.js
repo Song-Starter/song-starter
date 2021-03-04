@@ -18,21 +18,24 @@ class NavBar extends Component {
   render(){
     return (
       <div className="NavBar">
-        <label htmlFor="key">Select a Key</label>
-        <select name="key" id="key" onChange={this.handleChange}>
-          <option value="C">C</option>
-          <option value="Db">C#/Db</option>
-          <option value="D">D</option>
-          <option value="Eb">D#/Eb</option>
-          <option value="E">E</option>
-          <option value="F">F</option>
-          <option value="F#">F#/Gb</option>
-          <option value="G">G</option>
-          <option value="Ab">G#/Ab</option>
-          <option value="A">A</option>
-          <option value="Bb">A#/Bb</option>
-          <option value="B">B</option>
-        </select>
+        <div className="key-container">
+          <label htmlFor="key">Select a Key</label>
+          <select name="key" id="key" onChange={this.handleChange}>
+            <option value="C">C</option>
+            <option value="Db">C#/Db</option>
+            <option value="D">D</option>
+            <option value="Eb">D#/Eb</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+            <option value="F#">F#/Gb</option>
+            <option value="G">G</option>
+            <option value="Ab">G#/Ab</option>
+            <option value="A">A</option>
+            <option value="Bb">A#/Bb</option>
+            <option value="B">B</option>
+          </select>
+        </div>
+        <div className="qual-container">
         <input 
           type="radio" 
           id="major" 
@@ -50,7 +53,8 @@ class NavBar extends Component {
         <button 
           onClick={() => this.props.createNewSong(this.state.key, this.state.majmin)}>
           New Song
-        </button><br/>
+        </button>
+        </div><br/>
       </div>
     );
   }
