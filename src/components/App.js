@@ -20,7 +20,7 @@ class App extends Component {
     }
   }
 
-  createNewSong = () => {
+  createNewSong = (key, majmin) => {
     fetchPoem()
     .then(data => this.setState({
       lyrics: data})

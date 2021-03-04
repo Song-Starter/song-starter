@@ -17,7 +17,6 @@ class NavBar extends Component {
   }
 
   render(){
-    console.log(this.state)
     return (
       <div className="NavBar">
         <label htmlFor="key">Select a Key</label>
@@ -49,7 +48,10 @@ class NavBar extends Component {
           value="minor"
           onChange={this.handleChange}/>
         <label htmlFor="minor">Minor</label>
-        <button onClick={() => this.props.createNewSong()}>New Song</button><br/>
+        <button 
+          onClick={() => this.props.createNewSong(this.state.key, this.state.majmin)}>
+          New Song
+        </button><br/>
         <Link to="./saved">Saved</Link>
       </div>
     );
