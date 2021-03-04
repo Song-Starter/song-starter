@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-// import { Chord } from "tonal"
-// import * as Key from "tonal-key";
+import { Chord } from "tonal"
+import * as Key from "tonal-key";
 import './App.css';
 import {Switch, Route} from 'react-router-dom'
 import Song from './Song'
@@ -14,6 +14,8 @@ class App extends Component {
     super()
     this.state = {
       key: "",
+      major: true,
+      minor: false,
       lyrics: "",
       progression: [],
     }
@@ -28,9 +30,10 @@ class App extends Component {
   }
 
   getChordProgression = () => {
-    this.setState({
-      progression: []
-    })
+    console.log(Chord.notes("CMaj7"))
+    // this.setState({
+    //   progression: []
+    // })
   }
 
   render(){
