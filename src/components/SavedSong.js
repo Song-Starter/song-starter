@@ -7,6 +7,7 @@ const SavedSong = ({ lyrics, progression }) => {
       <div className="SavedSong">
         <p>{lyrics.title}</p>
         <p>{progression}</p>
+        <button>Show Song</button>
       </div>
     );
   }else{

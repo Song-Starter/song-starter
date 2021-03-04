@@ -3,12 +3,9 @@ import './Saved.css';
 import SavedSong from './SavedSong'
 
 const Saved = ({ savedArray }) => {
-  // console.log(savedArray)
-  if (savedArray) {
-      console.log(savedArray)
+  if (savedArray.length) {
       const songsToRender = savedArray.map(song => {
       return <SavedSong lyrics={song.lyrics} progression={song.progression}/>})
-      console.log(songsToRender)
     return (
       <div className="Saved">
         { songsToRender }
@@ -16,7 +13,11 @@ const Saved = ({ savedArray }) => {
     );
   } else {
     return(
-      <h1>Ain't got no songs!</h1>
+      <div className="Saved">
+        <h1>No</h1>
+        <h1>Saved</h1>
+        <h1>Songs</h1>
+      </div>
     )
   }
 
