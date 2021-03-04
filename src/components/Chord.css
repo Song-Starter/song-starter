@@ -1,0 +1,19 @@
+.Progression {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  max-width: 85%;
+  margin: auto;
+}
+
+.Chord {
+  display: flex;
+  flex-direction: column;
+  border: solid 2px black;
+}
+
+.chord-notes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}

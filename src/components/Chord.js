@@ -3,11 +3,12 @@ import { Chord as cord } from 'tonal';
 import './Chord.css';
 
 const Chord = (props) => {
-  console.log(props)
+  const chordNotes = cord.notes(props.name).map(note => <p>{note}</p>)
+  console.log(cord.notes(props.name))
   return (
     <div className="Chord">
-      <p>{props.name}</p>
-      <p>{cord.notes(props.name)}</p>
+      <p className="chord-name">{props.name}</p>
+      <div className="chord-notes">{chordNotes}</div>
       <audio></audio>
     </div>
   );

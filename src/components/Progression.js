@@ -8,7 +8,6 @@ const Progression = ({progression}) => {
   })
   return (
     <div className="Progression">
-      <h1>Progression</h1>
       { chordProgression }
     </div>
   );
