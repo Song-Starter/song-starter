@@ -3,7 +3,7 @@ import './Song.css';
 import Chord from './Chord'
 
 const Progression = ({progression}) => {
-  const chordProgression = progression.map(chord => {
+  const chordProgression = progression[0].map(chord => {
     return <Chord name={chord}/>
   })
   return (

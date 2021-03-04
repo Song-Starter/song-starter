@@ -3,6 +3,7 @@ import { Chord as cord } from 'tonal';
 import './Chord.css';
 
 const Chord = (props) => {
+  console.log(props)
   return (
     <div className="Chord">
       <p>{props.name}</p>
