@@ -32,7 +32,6 @@ class App extends Component {
   }
 
   getChordProgression = (key, majmin) => {
-    console.log(Key.chords(`${key} ${majmin}`))
     const songKey = Key.chords(`${key} ${majmin}`)
     let chordArray = []
     for(let i = 0; i < 4; i++) {
@@ -44,7 +43,6 @@ class App extends Component {
   }
 
   render(){
-        console.log("this.state", this.state)
     return (
       <div className="App">
         <Header createNewSong={this.createNewSong}/>
