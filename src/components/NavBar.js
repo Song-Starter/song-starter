@@ -52,7 +52,6 @@ class NavBar extends Component {
           onClick={() => this.props.createNewSong(this.state.key, this.state.majmin)}>
           New Song
         </button><br/>
-        <Link to="./saved">Saved</Link>
       </div>
     );
   }

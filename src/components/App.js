@@ -17,6 +17,7 @@ class App extends Component {
       majmin: "",
       lyrics: "",
       progression: [],
+      saved: []
     }
   }
 

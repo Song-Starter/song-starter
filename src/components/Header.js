@@ -1,6 +1,7 @@
 import React from 'react';
 import './Header.css';
 import NavBar from './NavBar'
+import SavedNav from './SavedNav'
 import {Link} from 'react-router-dom'
 
 const Header = ({createNewSong}) => {
@@ -10,6 +11,7 @@ const Header = ({createNewSong}) => {
         <h1>Song Starter</h1>
       </Link>
       <NavBar createNewSong={createNewSong}/>
+      <SavedNav />
     </div>
   );
 }
