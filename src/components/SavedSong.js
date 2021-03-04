@@ -1,5 +1,6 @@
 import React from 'react';
 import './Saved.css';
+import {Link} from 'react-router-dom'
 
 const SavedSong = ({ lyrics, progression, showSavedSong }) => {
   if(lyrics && progression){
@@ -7,7 +8,9 @@ const SavedSong = ({ lyrics, progression, showSavedSong }) => {
       <div className="SavedSong">
         <p>{lyrics.title}</p>
         <p>{progression}</p>
-        <button onClick={() => showSavedSong(lyrics, progression)}>Show Song</button>
+        <Link to="/">
+          <button onClick={() => showSavedSong(lyrics, progression)}>Show Song</button>
+        </Link>
       </div>
     );
   }else{
