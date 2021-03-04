@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Chord } from "tonal"
+// import { Chord } from "tonal"
 import * as Key from "tonal-key";
 import './App.css';
 import {Switch, Route} from 'react-router-dom'
@@ -38,10 +38,9 @@ class App extends Component {
     for(let i = 0; i < 4; i++) {
       chordArray.push(songKey[Math.floor(Math.random() * 6)])
     }
-    console.log(chordArray)
-    // this.setState({
-    //   progression: []
-    // })
+    this.setState({
+      progression: [chordArray]
+    })
   }
 
   render(){
@@ -52,7 +51,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/"   
           render={() => {
-          return <Song lyrics={ this.state.lyrics }/>
+          return <Song lyrics={ this.state.lyrics } progression={ this.state.progression }/>
           }}/>
           <Route path="/poem" 
             render={() => {

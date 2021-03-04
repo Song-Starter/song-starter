@@ -1,13 +1,12 @@
 import React from 'react';
-import { chord } from 'tonal';
+import { Chord as cord } from 'tonal';
 import './Chord.css';
 
-const Chord = () => {
+const Chord = (props) => {
   return (
     <div className="Chord">
-      <h1>Chord</h1>
-      {/* <p>{chord.name}</p>
-      <p>{chord.notes(name)}</p> */}
+      <p>{props.name}</p>
+      <p>{cord.notes(props.name)}</p>
       <audio></audio>
     </div>
   );
