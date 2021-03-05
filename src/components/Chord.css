@@ -17,6 +17,12 @@
              20px 20px 30px #1A1E23;
 }
 
+.Chord:active {
+  background: linear-gradient(250deg, #24282E, #1A1E23);
+  box-shadow: -10px -10px 20px #24282E,
+             10px 10px 20px #1A1E23;
+}
+
 .chord-name {
   font-size: 2rem;
 }
