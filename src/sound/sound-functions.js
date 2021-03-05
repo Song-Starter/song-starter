@@ -16,5 +16,8 @@ const soundEngine = {
       timeIndex += noteLength
     }
     sound.play('69')
+  },
+  play(selectedChord) {
+    console.log(selectedChord)
   }
 }
