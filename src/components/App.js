@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Chord } from 'tonal';
 import * as Key from "tonal-key";
 import './App.css';
 import {Switch, Route} from 'react-router-dom'
@@ -51,6 +51,11 @@ class App extends Component {
     })
   }
 
+  playChord = (chord) => {
+    const chordNotes = Chord.notes(chord)
+    console.log("you picked", chord, chordNotes)
+  }
+
   saveSong = () => {
     const songObj = {
       lyrics: this.state.lyrics,
@@ -89,7 +94,8 @@ class App extends Component {
         <Switch>
           <Route exact path="/"   
           render={() => {
-          return <Song lyrics={ this.state.lyrics } progression={ this.state.progression }  saveSong={this.saveSong}/>
+          return <Song lyrics={ this.state.lyrics } progression={ this.state.progression }  saveSong={this.saveSong}
+          playChord={this.playChord}/>
           }}/>
           <Route path="/poem" 
             render={() => {
