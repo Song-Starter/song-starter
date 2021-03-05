@@ -37,6 +37,10 @@
 }
 
 @media screen and (max-width: 600px){
+  .chord-name {
+    font-size: 1.5rem;
+  }
+
   .note-label {
     display: none !important;
   }
