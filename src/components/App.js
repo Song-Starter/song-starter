@@ -63,6 +63,13 @@ class App extends Component {
     localStorage.setItem('saved', json)
   }
 
+  deleteSong = (index) => {
+    const newSaved = this.state.saved
+    this.setState({
+      saved: newSaved.splice(index, 1)
+    })
+  }
+
   componentDidMount() {
     const json = localStorage.getItem('saved');
     const saved = json ? JSON.parse(json) : [];
@@ -77,11 +84,11 @@ class App extends Component {
   render(){
     return (
       <div className="App">
-        <Header createNewSong={this.createNewSong} saveSong={this.saveSong}/>
+        <Header createNewSong={this.createNewSong}/>
         <Switch>
           <Route exact path="/"   
           render={() => {
-          return <Song lyrics={ this.state.lyrics } progression={ this.state.progression }/>
+          return <Song lyrics={ this.state.lyrics } progression={ this.state.progression }  saveSong={this.saveSong}/>
           }}/>
           <Route path="/poem" 
             render={() => {
@@ -89,7 +96,7 @@ class App extends Component {
           }}/>
           <Route path="/saved"
             render={() => {
-              return <Saved savedArray={ this.state.saved } showSavedSong={this.showSavedSong}/>
+              return <Saved savedArray={ this.state.saved } showSavedSong={this.showSavedSong} deleteSong={this.deleteSong}/>
           }}/>
         </Switch>
       </div>

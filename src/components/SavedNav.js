@@ -6,7 +6,6 @@ const SavedNav = ({saveSong}) => {
   return (
     <div className="SavedNav">
       <Link to="./saved">Show Saved</Link>
-      <button onClick={saveSong}>Save Song</button>
     </div>
   );
 }

@@ -26,3 +26,13 @@
 .poetry-deets a {
   text-decoration: underline;
 }
+
+.save-song {
+  padding: 1% 5%;
+  margin-top: 2%;
+  border: solid 1px black;
+  border-radius: 10px;
+  background: linear-gradient(315deg, #24282E, #1A1E23);
+  box-shadow: -20px -20px 30px #24282E,
+             20px 20px 30px #1A1E23;
+}

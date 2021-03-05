@@ -2,10 +2,16 @@ import React from 'react';
 import './Saved.css';
 import SavedSong from './SavedSong'
 
-const Saved = ({ savedArray, showSavedSong }) => {
+const Saved = ({ savedArray, showSavedSong, deleteSong }) => {
   if (savedArray.length) {
-      const songsToRender = savedArray.map(song => {
-      return <SavedSong lyrics={song.lyrics} progression={song.progression} showSavedSong={showSavedSong}/>})
+      const songsToRender = savedArray.map((song, i)=> {
+      return <SavedSong 
+        key={i} 
+        id={Date.now()}
+        lyrics={song.lyrics} 
+        progression={song.progression} 
+        showSavedSong={showSavedSong} 
+        deleteSong={deleteSong}/>})
     return (
       <div className="Saved">
         { songsToRender }
@@ -14,9 +20,9 @@ const Saved = ({ savedArray, showSavedSong }) => {
   } else {
     return(
       <div className="Saved">
-        <h1>No</h1>
-        <h1>Saved</h1>
-        <h1>Songs</h1>
+        <h1></h1>
+        <h1>No Saved Songs</h1>
+        <h1></h1>
       </div>
     )
   }
