@@ -14,7 +14,6 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      sound: sound,
       key: "",
       majmin: "",
       lyrics: "",
@@ -32,6 +31,11 @@ class App extends Component {
       })
     )
     this.getChordProgression(key, majmin)
+    this.setUpAudio()
+  }
+
+  setUpAudio = () => {
+    sound.load()
   }
 
   showSavedSong = (savedLyrics, savedProgression) => {
