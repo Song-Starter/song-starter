@@ -8,11 +8,13 @@ import Poem from './Poem'
 import Saved from './Saved'
 import Header from './Header'
 import { fetchPoem } from '../network-calls'
+import { sound, soundEngine } from '../sound/sound-functions'
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
+      sound: sound,
       key: "",
       majmin: "",
       lyrics: "",
@@ -53,7 +55,7 @@ class App extends Component {
 
   playChord = (chord) => {
     const chordNotes = Chord.notes(chord)
-    console.log("you picked", chord, chordNotes)
+    soundEngine.play(chordNotes)
   }
 
   saveSong = () => {

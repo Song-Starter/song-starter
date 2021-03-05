@@ -1,13 +1,19 @@
-import { Howler, howl } from 'howler';
+import { Howler, Howl } from 'howler';
+import { note } from 'tonal';
 
-const sound = new howl ({
+
+export const sound = new Howl ({
   src: ['../sound/pianosprite.mp3'],
   onload() {
+    console.log("Sound is loaded")
     soundEngine.init();
+  },
+  onloaderror(error, msg){
+    console.log("NO SOUND", error, msg)
   }
 })
 
-const soundEngine = {
+export const soundEngine = {
   init() {
     const noteLength = 2400;
     let timeIndex = 0;
@@ -15,9 +21,16 @@ const soundEngine = {
       sound['_sprite'][i] = [timeIndex, noteLength];
       timeIndex += noteLength
     }
-    sound.play('69')
   },
   play(selectedChord) {
-    console.log(selectedChord)
+    sound.volume(0.7)
+    const chordMidiNums = selectedChord.map(noteName => {
+      return note(noteName+"4").midi;
+    })
+
+    chordMidiNums.forEach(midiNum => {
+      console.log(midiNum)
+      sound.play(midiNum.toString())
+    })
   }
 }
