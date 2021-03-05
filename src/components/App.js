@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Howler, howl } from 'howl';
+
 import * as Key from "tonal-key";
 import './App.css';
 import {Switch, Route} from 'react-router-dom'
