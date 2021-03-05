@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import { Chord } from "tonal"
+import { Chord } from 'tonal';
 import * as Key from "tonal-key";
 import './App.css';
 import {Switch, Route} from 'react-router-dom'
@@ -8,6 +8,7 @@ import Poem from './Poem'
 import Saved from './Saved'
 import Header from './Header'
 import { fetchPoem } from '../network-calls'
+import { sound, soundEngine } from '../sound/sound-functions'
 
 class App extends Component {
   constructor() {
@@ -30,6 +31,11 @@ class App extends Component {
       })
     )
     this.getChordProgression(key, majmin)
+    this.setUpAudio()
+  }
+
+  setUpAudio = () => {
+    sound.load()
   }
 
   showSavedSong = (savedLyrics, savedProgression) => {
@@ -49,6 +55,11 @@ class App extends Component {
     this.setState({
       progression: [chordArray]
     })
+  }
+
+  playChord = (chord) => {
+    const chordNotes = Chord.notes(chord)
+    soundEngine.play(chordNotes)
   }
 
   saveSong = () => {
@@ -89,7 +100,8 @@ class App extends Component {
         <Switch>
           <Route exact path="/"   
           render={() => {
-          return <Song lyrics={ this.state.lyrics } progression={ this.state.progression }  saveSong={this.saveSong}/>
+          return <Song lyrics={ this.state.lyrics } progression={ this.state.progression }  saveSong={this.saveSong}
+          playChord={this.playChord}/>
           }}/>
           <Route path="/poem" 
             render={() => {
