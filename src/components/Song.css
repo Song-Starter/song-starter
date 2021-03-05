@@ -28,6 +28,7 @@
 }
 
 .save-song {
+  font-size: 2rem;
   padding: 1% 5%;
   margin-top: 2%;
   border: solid 1px black;
