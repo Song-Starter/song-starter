@@ -32,3 +32,4 @@ export const soundEngine = {
       sound.play(midiNum.toString())
     })
   }
+}
