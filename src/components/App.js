@@ -59,6 +59,19 @@ class App extends Component {
     this.setState({
       saved: [...this.state.saved, songObj]
     })
+    const json = JSON.stringify(this.state.saved)
+    localStorage.setItem('saved', json)
+  }
+
+  componentDidMount() {
+    const json = localStorage.getItem('saved');
+    const saved = json ? JSON.parse(json) : [];
+    this.setState(() => ({ saved }))
+  }
+
+  componentDidUpdate(prevProps, prevStates){
+    const json = JSON.stringify(this.state.saved)
+    localStorage.setItem('saved', json)
   }
 
   render(){
