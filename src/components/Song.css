@@ -28,6 +28,7 @@
 }
 
 .save-song {
+  font-size: 1.5rem;
   padding: 1% 5%;
   margin-top: 2%;
   border: solid 1px black;
@@ -35,4 +36,10 @@
   background: linear-gradient(315deg, #24282E, #1A1E23);
   box-shadow: -20px -20px 30px #24282E,
              20px 20px 30px #1A1E23;
+}
+
+.save-song:active {
+  background: linear-gradient(315deg, #1A1E23, #24282E);
+  box-shadow: -20px -20px 30px #1A1E23,
+             20px 20px 30px #24282E;
 }
