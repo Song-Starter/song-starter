@@ -23,6 +23,11 @@
   margin: 5px;
 }
 
+.delete-button {
+  width: 20%;
+  margin: auto;
+}
+
 @media screen and (max-width: 600px){
   .Saved {
     grid-template-columns: repeat(2, 1fr);

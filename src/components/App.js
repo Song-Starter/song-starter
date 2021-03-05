@@ -65,8 +65,9 @@ class App extends Component {
 
   deleteSong = (index) => {
     const newSaved = this.state.saved
+    newSaved.splice(index, 1)
     this.setState({
-      saved: newSaved.splice(index, 1)
+      saved: newSaved
     })
   }
 

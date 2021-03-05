@@ -4,8 +4,8 @@ import {Link} from 'react-router-dom'
 
 const SavedSong = ({ lyrics, progression, showSavedSong, deleteSong, id }) => {
   if(lyrics && progression){
-    const previewChords = progression[0].map(chord => {
-      return <p>{chord}</p>
+    const previewChords = progression[0].map((chord, i) => {
+      return <p key={i}>{chord}</p>
     })
     return (
       <div className="SavedSong">
@@ -14,7 +14,7 @@ const SavedSong = ({ lyrics, progression, showSavedSong, deleteSong, id }) => {
         <Link to="/">
           <button className="showsong-button" onClick={() => showSavedSong(lyrics, progression)}>Show Song</button>
         </Link>
-        <button onClick={()=>deleteSong(id)}>X</button>
+        <button className="delete-button" onClick={()=>deleteSong(id)}>X</button>
       </div>
     );
   }else{

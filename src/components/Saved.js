@@ -7,7 +7,7 @@ const Saved = ({ savedArray, showSavedSong, deleteSong }) => {
       const songsToRender = savedArray.map((song, i)=> {
       return <SavedSong 
         key={i} 
-        id={Date.now()}
+        id={i}
         lyrics={song.lyrics} 
         progression={song.progression} 
         showSavedSong={showSavedSong} 
@@ -20,9 +20,9 @@ const Saved = ({ savedArray, showSavedSong, deleteSong }) => {
   } else {
     return(
       <div className="Saved">
-        <h1></h1>
+        <div></div>
         <h1>No Saved Songs</h1>
-        <h1></h1>
+        <div></div>
       </div>
     )
   }
