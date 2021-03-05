@@ -59,16 +59,37 @@ class App extends Component {
     this.setState({
       saved: [...this.state.saved, songObj]
     })
+    const json = JSON.stringify(this.state.saved)
+    localStorage.setItem('saved', json)
+  }
+
+  deleteSong = (index) => {
+    const newSaved = this.state.saved
+    newSaved.splice(index, 1)
+    this.setState({
+      saved: newSaved
+    })
+  }
+
+  componentDidMount() {
+    const json = localStorage.getItem('saved');
+    const saved = json ? JSON.parse(json) : [];
+    this.setState(() => ({ saved }))
+  }
+
+  componentDidUpdate(prevProps, prevStates){
+    const json = JSON.stringify(this.state.saved)
+    localStorage.setItem('saved', json)
   }
 
   render(){
     return (
       <div className="App">
-        <Header createNewSong={this.createNewSong} saveSong={this.saveSong}/>
+        <Header createNewSong={this.createNewSong}/>
         <Switch>
           <Route exact path="/"   
           render={() => {
-          return <Song lyrics={ this.state.lyrics } progression={ this.state.progression }/>
+          return <Song lyrics={ this.state.lyrics } progression={ this.state.progression }  saveSong={this.saveSong}/>
           }}/>
           <Route path="/poem" 
             render={() => {
@@ -76,7 +97,7 @@ class App extends Component {
           }}/>
           <Route path="/saved"
             render={() => {
-              return <Saved savedArray={ this.state.saved } showSavedSong={this.showSavedSong}/>
+              return <Saved savedArray={ this.state.saved } showSavedSong={this.showSavedSong} deleteSong={this.deleteSong}/>
           }}/>
         </Switch>
       </div>
