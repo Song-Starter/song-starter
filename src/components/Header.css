@@ -180,6 +180,28 @@ button:active {
   .NavBar {
     height: auto;
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+
+  .new-song-button {
+    grid-area: 2 / 1 / 3 / 3;
+    height: 100%;
+  }
+
+  .ChordNav {
+    grid-area: 3 / 2 / 3 / 3;
+    margin-left: 5%;
+    text-align: center;
+  }
+
+  .spicy {
+    width: 20%;
+  }
+
+  .seventh p {
+   margin: 0;
   }
 
   .key-container, .qual-container{

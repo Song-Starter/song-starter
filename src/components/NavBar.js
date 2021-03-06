@@ -55,6 +55,7 @@ class NavBar extends Component {
         <label htmlFor="minor">Minor</label>
         </div>
         <button 
+          className="new-song-button"
           onClick={() => this.props.createNewSong(this.state.key, this.state.majmin, this.state.seventh)}>
           New Song
         </button>
