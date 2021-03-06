@@ -3,9 +3,9 @@ import './Header.css';
 
 const ChordNav = ({handleChange}) =>{
   return (
-    <div className="ChordNav">
+    <div className="ChordNav hidden">
       <div className="seventh">
-        <p>Sevenths</p>
+        <p>7th</p>
         <input 
           type="radio" 
           id="true" 

@@ -17,6 +17,7 @@ class App extends Component {
       key: "",
       majmin: "",
       lyrics: "",
+      sevenths: false,
       progression: [],
       saved: []
     }
@@ -45,8 +46,8 @@ class App extends Component {
     })
   }
 
-  showSeventhsOption = () => {
-    
+  showHideSeventhsOption = () => {
+    document.querySelector('.ChordNav').classList.toggle('hidden')
   }
 
   getChordProgression = (key, majmin, seventh) => {
@@ -100,7 +101,7 @@ class App extends Component {
   render(){
     return (
       <div className="App">
-        <Header createNewSong={this.createNewSong}/>
+        <Header createNewSong={this.createNewSong} showHideSeventhsOption={this.showHideSeventhsOption}/>
         <Switch>
           <Route exact path="/"   
           render={() => {
