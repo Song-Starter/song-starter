@@ -22,13 +22,14 @@ class App extends Component {
     }
   }
 
-  createNewSong = (key, majmin) => {
+  createNewSong = (key, majmin, seventh, oct) => {
+    console.log(seventh, oct)
     fetchPoem()
-    .then(data => this.setState({
-      key: key,
-      majmin: majmin,
-      lyrics: data,
-      })
+      .then(data => this.setState({
+        key: key,
+        majmin: majmin,
+        lyrics: data,
+        })
     )
     this.getChordProgression(key, majmin)
     this.setUpAudio()

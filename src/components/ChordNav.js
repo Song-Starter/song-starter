@@ -1,53 +1,40 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Header.css';
 
-class ChordNav extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      octave: "4",
-      seventh: "triad"
-    }
-  }
-
-  handleChange = (event) => {
-    const {name, value} = event.target
-    this.setState({ [name]: value })
-  }
-
-  render(){
-    return (
-      <div className="ChordNav">
-        <div className="octave-selector">
-          <label htmlFor="octave">Octave</label>
-          <input 
-            type="number"
-            name="octave" 
-            id="octave" 
-            min="0"
-            max="6"
-            onChange={this.handleChange}>
-          </input>
-        </div>
-        <div className="seventh">
-          <input 
-            type="radio" 
-            id="triad" 
-            name="chordType" 
-            value="triad"
-            onChange={this.handleChange}/>
-          <label htmlFor="triad">Triads</label>
-          <input 
-            type="radio" 
-            id="seventh" 
-            name="chordType" 
-            value="seventh"
-            onChange={this.handleChange}/>
-          <label htmlFor="seventh">Sevenths</label>
-        </div>
+const ChordNav = ({handleChange}) =>{
+  return (
+    <div className="ChordNav">
+      <div className="octave-selector">
+        <label htmlFor="octave">Octave</label>
+        <input 
+          type="number"
+          name="octave" 
+          id="octave" 
+          min="0"
+          max="6"
+          value="3"
+          onChange={handleChange}>
+        </input>
       </div>
-    );
-  }
+      <div className="seventh">
+        <p>Sevenths</p>
+        <input 
+          type="radio" 
+          id="true" 
+          name="chordValue" 
+          value="true"
+          onChange={handleChange}/>
+        <label htmlFor="true">yes</label>
+        <input 
+          type="radio" 
+          id="false" 
+          name="chordValue" 
+          value="false"
+          onChange={handleChange}/>
+        <label htmlFor="false">no</label>
+      </div>
+    </div>
+  );
 }
 
 export default ChordNav;
