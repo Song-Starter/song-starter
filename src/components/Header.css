@@ -26,6 +26,15 @@ h1 {
   align-items: center;
 }
 
+.ChordNav {
+  display: flex;
+}
+
+.octave-selector, .seventh {
+  display: flex;
+  align-items: center;
+}
+
 .key-container {
   display: flex;
   align-items: center;

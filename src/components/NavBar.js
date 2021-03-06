@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Header.css';
+import ChordNav from './ChordNav'
 
 class NavBar extends Component {
   constructor(props) {
@@ -55,6 +56,7 @@ class NavBar extends Component {
           New Song
         </button>
         </div><br/>
+        <ChordNav />
       </div>
     );
   }
