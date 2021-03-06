@@ -22,8 +22,8 @@ class App extends Component {
     }
   }
 
-  createNewSong = (key, majmin, seventh, oct) => {
-    console.log(seventh, oct)
+  createNewSong = (key, majmin, seventh) => {
+    console.log(seventh)
     fetchPoem()
       .then(data => this.setState({
         key: key,
@@ -31,7 +31,7 @@ class App extends Component {
         lyrics: data,
         })
     )
-    this.getChordProgression(key, majmin)
+    this.getChordProgression(key, majmin, seventh)
     this.setUpAudio()
   }
 
@@ -46,8 +46,8 @@ class App extends Component {
     })
   }
 
-  getChordProgression = (key, majmin) => {
-    const songKey = Key.triads(`${key} ${majmin}`)
+  getChordProgression = (key, majmin, seventh) => {
+    const songKey = seventh ? Key.chords(`${key} ${majmin}`) : Key.triads(`${key} ${majmin}`)
     let chordArray = []
     chordArray.push(songKey[0])
     for(let i = 0; i < 3; i++) {

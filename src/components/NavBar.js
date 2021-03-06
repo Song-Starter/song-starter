@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Header.css';
-// import ChordNav from './ChordNav'
+import ChordNav from './ChordNav'
 
 class NavBar extends Component {
   constructor(props) {
@@ -8,7 +8,6 @@ class NavBar extends Component {
     this.state = {
       key: "C",
       majmin: "Major",
-      octave: "4",
       seventh: false
     }
   }
@@ -53,12 +52,12 @@ class NavBar extends Component {
           value="minor"
           onChange={this.handleChange}/>
         <label htmlFor="minor">Minor</label>
+        </div><br/>
         <button 
           onClick={() => this.props.createNewSong(this.state.key, this.state.majmin, this.state.seventh, this.state.octave)}>
           New Song
         </button>
-        </div><br/>
-        {/* <ChordNav handleChange={this.handleChange}/> */}
+        <ChordNav handleChange={this.handleChange}/>
       </div>
     );
   }
