@@ -52,12 +52,12 @@ class NavBar extends Component {
           value="minor"
           onChange={this.handleChange}/>
         <label htmlFor="minor">Minor</label>
+        <ChordNav handleChange={this.handleChange}/>
         </div><br/>
         <button 
-          onClick={() => this.props.createNewSong(this.state.key, this.state.majmin, this.state.seventh, this.state.octave)}>
+          onClick={() => this.props.createNewSong(this.state.key, this.state.majmin, this.state.seventh)}>
           New Song
         </button>
-        <ChordNav handleChange={this.handleChange}/>
       </div>
     );
   }

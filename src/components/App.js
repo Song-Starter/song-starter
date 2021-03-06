@@ -23,7 +23,6 @@ class App extends Component {
   }
 
   createNewSong = (key, majmin, seventh) => {
-    console.log(seventh)
     fetchPoem()
       .then(data => this.setState({
         key: key,
@@ -44,6 +43,10 @@ class App extends Component {
       lyrics: savedLyrics,
       progression: savedProgression
     })
+  }
+
+  showSeventhsOption = () => {
+    
   }
 
   getChordProgression = (key, majmin, seventh) => {

@@ -5,21 +5,24 @@ h1 {
 .title {
   font-family: 'Amatic SC', cursive, sans-serif;
   font-size: 5vw;
+  grid-area: 1 / 1 / 2 / 2 ;
 }
 
 .Header {
   background-color: #2C323A;
   height: 15vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 20% 80%;
   font-size: 1.25rem;
+}
+
+.navigation {
+  grid-area: 1 / 2 / 2 / 3 ;
+  height: 100%;
 }
 
 .NavBar, .SavedNav {
   width: 90%;
-  height: 3vw;
   background-color: #24282E;
   display: flex;
   justify-content: center;
@@ -27,17 +30,13 @@ h1 {
 }
 
 .ChordNav {
-  display: flex;
-}
-
-.octave-selector, .seventh {
-  display: flex;
-  align-items: center;
+  display: none !important;
 }
 
 .seventh {
   display: flex;
-	overflow: hidden;
+	overflow: hidden;  
+  align-items: center;
 }
 
 .seventh input, .qual-container input {

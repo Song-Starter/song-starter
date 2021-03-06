@@ -2,7 +2,7 @@ import React from 'react';
 import './Header.css';
 import {Link} from 'react-router-dom'
 
-const SavedNav = ({saveSong}) => {
+const SavedNav = () => {
   return (
     <div className="SavedNav">
       <Link to="./saved">Show Saved</Link>

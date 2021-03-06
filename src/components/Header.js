@@ -10,8 +10,11 @@ const Header = ({createNewSong, saveSong}) => {
       <Link to="/">
         <h1 className="title">Song Starter</h1>
       </Link>
-      <NavBar createNewSong={createNewSong}/>
-      <SavedNav saveSong={saveSong}/>
+      <div className="navigation">
+        <NavBar createNewSong={createNewSong}/>
+        <SavedNav saveSong={saveSong}/>
+      </div>
+
     </div>
   );
 }
