@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import './Header.css';
+import ChordNav from './ChordNav'
+import {Link} from 'react-router-dom'
 
 class NavBar extends Component {
   constructor(props) {
     super(props)
     this.state = {
       key: "C",
-      majmin: "Major"
+      majmin: "Major",
+      seventh: false
     }
   }
 
@@ -19,7 +22,7 @@ class NavBar extends Component {
     return (
       <div className="NavBar">
         <div className="key-container">
-          <label htmlFor="key">Select a Key</label>
+          <label htmlFor="key">Key</label>
           <select name="key" id="key" onChange={this.handleChange}>
             <option value="C">C</option>
             <option value="Db">C#/Db</option>
@@ -50,11 +53,14 @@ class NavBar extends Component {
           value="minor"
           onChange={this.handleChange}/>
         <label htmlFor="minor">Minor</label>
+        </div>
         <button 
-          onClick={() => this.props.createNewSong(this.state.key, this.state.majmin)}>
+          className="new-song-button"
+          onClick={() => this.props.createNewSong(this.state.key, this.state.majmin, this.state.seventh)}>
           New Song
         </button>
-        </div><br/>
+        <button className="spicy" onClick={this.props.showHideSeventhsOption}>7s</button>
+        <ChordNav handleChange={this.handleChange}/>
       </div>
     );
   }
