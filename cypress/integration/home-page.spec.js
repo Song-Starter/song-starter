@@ -79,6 +79,7 @@ context('Home Page', () => {
       cy.get('div[class="Progression"]')
       cy.get('div[class=Chord]').contains('C').click()
       cy.window().should('have.attr', 'Sound')
+      cy.window('Howl').trigger('init')
     })
   })
 })
