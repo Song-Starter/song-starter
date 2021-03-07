@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import { Chord } from 'tonal';
 import * as Key from "tonal-key";
 import './App.css';
-import {Switch, Route} from 'react-router-dom'
+import {Switch, Route, Redirect} from 'react-router-dom'
 import Song from './Song'
 import Poem from './Poem'
 import Saved from './Saved'
 import Header from './Header'
+import Error from './Error'
 import { fetchPoem } from '../network-calls'
 import { sound, soundEngine } from '../sound/sound-functions'
 
@@ -103,7 +104,10 @@ class App extends Component {
       <div className="App">
         <Header createNewSong={this.createNewSong} showHideSeventhsOption={this.showHideSeventhsOption}/>
         <Switch>
-          <Route exact path="/"   
+          <Route exact path="/">
+            <Redirect to="/home"/>
+          </Route>
+          <Route exact path="/home"   
           render={() => {
           return <Song lyrics={ this.state.lyrics } progression={ this.state.progression }  saveSong={this.saveSong}
           playChord={this.playChord}/>
@@ -116,6 +120,7 @@ class App extends Component {
             render={() => {
               return <Saved savedArray={ this.state.saved } showSavedSong={this.showSavedSong} deleteSong={this.deleteSong}/>
           }}/>
+          <Route path="" component={ Error }/>
         </Switch>
       </div>
     ); 
