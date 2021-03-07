@@ -22,8 +22,6 @@ context('Home Page', () => {
       cy.get('div[class=Song]')
       .find('h1')
       .contains('Let\'s get started!')
-    })
-    it('should NOT display a song on page load', () => {
       cy.get('div[class=Song]')
       .find('p')
       .contains('Choose "Major" or "Minor".')
@@ -44,11 +42,6 @@ context('Home Page', () => {
       .find('label')
       .contains('Minor')
       .click()
-    })
-    it('should display a new song when "New Song" is clicked', () => {
-      cy.get('div[class=Header]')
-        .find('div[class=NavBar]')
-      cy.get('button[class=new-song-button]').click()
     })
     it('should display a new song when "New Song" is clicked', () => {
       cy.get('div[class=Header]')
