@@ -30,6 +30,15 @@ class UserLyrics extends Component {
     }
   }
 
+  updateFullPoem = () => {
+    const fullPoem = this.state.poem.match(/[^\r\n]+/g)
+    if(fullPoem){
+      this.setState({
+        full: fullPoem
+      })
+    }
+  }
+
 
   render() {
     return (
