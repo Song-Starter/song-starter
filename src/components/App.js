@@ -7,6 +7,7 @@ import Song from './Song'
 import Poem from './Poem'
 import Saved from './Saved'
 import Header from './Header'
+import UserLyrics from './UserLyrics'
 import Error from './Error'
 import { fetchPoem } from '../network-calls'
 import { sound, soundEngine } from '../sound/sound-functions'
@@ -88,6 +89,14 @@ class App extends Component {
     })
   }
 
+  upDateLyrics = (newLyrics) => {
+    const newProgression = this.state.progression
+    this.setState({
+      lyrics: newLyrics,
+      progression: newProgression
+    })
+  }
+
   componentDidMount() {
     const json = localStorage.getItem('saved');
     const saved = json ? JSON.parse(json) : [];
@@ -115,6 +124,9 @@ class App extends Component {
           <Route path="/poem" 
             render={() => {
             return <Poem lyrics={ this.state.lyrics }/>
+          }}/>
+          <Route path="/user-lyrics" render={() => {
+            return <UserLyrics updateLyrics={this.upDateLyrics}/> 
           }}/>
           <Route path="/saved"
             render={() => {

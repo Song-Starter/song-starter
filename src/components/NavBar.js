@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './Header.css';
 import ChordNav from './ChordNav'
-import {Link} from 'react-router-dom'
 
 class NavBar extends Component {
   constructor(props) {
@@ -54,13 +53,12 @@ class NavBar extends Component {
           onChange={this.handleChange}/>
         <label htmlFor="minor">Minor</label>
         </div>
+        <ChordNav handleChange={this.handleChange}/>
         <button 
           className="new-song-button"
           onClick={() => this.props.createNewSong(this.state.key, this.state.majmin, this.state.seventh)}>
           New Song
         </button>
-        <button className="spicy" onClick={this.props.showHideSeventhsOption}>7s</button>
-        <ChordNav handleChange={this.handleChange}/>
       </div>
     );
   }

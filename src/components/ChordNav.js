@@ -3,7 +3,7 @@ import './Header.css';
 
 const ChordNav = ({handleChange}) =>{
   return (
-    <div className="ChordNav hidden">
+    <div className="ChordNav">
       <div className="seventh">
         <p>7th</p>
         <input 
