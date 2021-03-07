@@ -6,16 +6,6 @@ h1 {
   display: none !important;
 }
 
-.spicy {
-  margin-left: 2%;
-  padding: 2px;
-  background-color: #e4e4e439;
-}
-
-.spicy:hover {
-  background-color: #e4e4e4;
-}
-
 .title {
   font-family: 'Amatic SC', cursive, sans-serif;
   font-size: 5vw;
@@ -192,8 +182,9 @@ button:active {
 
   .ChordNav {
     grid-area: 2 / 1 / 2 / 3;
-    margin: 0 auto;
+    margin: auto;
     text-align: center;
+    width: auto;
   }
 
   .seventh p {
