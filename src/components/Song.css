@@ -9,6 +9,21 @@
   margin: 3% 5% 5% 5%;
 }
 
+.UserLyrics input {
+  margin: auto;
+  width: 40%;
+}
+
+.UserLyrics textarea {
+  margin: auto;
+  width: 45%;
+}
+
+.UserLyrics button{
+  margin: auto;
+  width: 20%;
+}
+
 .lyrics-display {
   margin: 3%;
   display: flex;

@@ -5,7 +5,6 @@ import Progression from './Progression'
 import Error from './Error'
 
 const Song = ({ lyrics, progression, saveSong, playChord }) => {
-  console.log(lyrics)
   if(lyrics && progression){
     return (
       <div className="Song">

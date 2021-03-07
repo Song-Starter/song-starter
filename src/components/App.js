@@ -89,6 +89,14 @@ class App extends Component {
     })
   }
 
+  upDateLyrics = (newLyrics) => {
+    const newProgression = this.state.progression
+    this.setState({
+      lyrics: newLyrics,
+      progression: newProgression
+    })
+  }
+
   componentDidMount() {
     const json = localStorage.getItem('saved');
     const saved = json ? JSON.parse(json) : [];
@@ -117,7 +125,9 @@ class App extends Component {
             render={() => {
             return <Poem lyrics={ this.state.lyrics }/>
           }}/>
-          <Route path="/userlyrics" component={ UserLyrics } />
+          <Route path="/user-lyrics" render={() => {
+            return <UserLyrics updateLyrics={this.upDateLyrics}/> 
+          }}/>
           <Route path="/saved"
             render={() => {
               return <Saved savedArray={ this.state.saved } showSavedSong={this.showSavedSong} deleteSong={this.deleteSong}/>

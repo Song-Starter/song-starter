@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './Header.css';
 import ChordNav from './ChordNav'
-import {Link} from 'react-router-dom'
 
 class NavBar extends Component {
   constructor(props) {

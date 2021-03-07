@@ -3,38 +3,58 @@ import './Song.css';
 import {Link} from 'react-router-dom'
 
 class UserLyrics extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       title: "",
-      lyrics: "",
+      poem: "",
+      full: [],
+      short: "",
+      author: "You"
     }
   }
 
   handleChange = (event) => {
     const {name, value} = event.target
     this.setState({ [name]: value })
+    this.updateShortPoem()
+    this.updateFullPoem()
+  }
+
+  updateShortPoem = () => {
+    const shortPoem = this.state.poem.match(/[^\r\n]+/g)
+    if(shortPoem && shortPoem.length < 5){
+      this.setState({
+        short: shortPoem
+      })
+    }
   }
 
 
   render() {
     return (
-      <div className="UserLyrics">
+      <div className="UserLyrics Lyrics">
         <h1>Add Your Lyrics</h1>
+        <Link to="/" className="back-song">or go back...</Link>
         <label htmlFor="user-title">Title</label>
         <input 
           type="text" 
+          placeholder="Song Title"
           id="user-title" 
           name="title" 
           value={this.state.title}
           onChange={this.handleChange}/>
-        <input 
-          type="text" 
+        <label htmlFor="user-lyrics">Lyrics</label>
+        <textarea 
+          placeholder="Song lyrics..."
           id="user-lyrics" 
-          name="lyrics" 
+          name="poem"
+          rows="20"
+          cols="5" 
           value={this.state.lyrics}
           onChange={this.handleChange}/>
-        <button>Save Lyrics</button>
+        <button onClick={() => this.props.updateLyrics(this.state)}>Save Lyrics</button>
+        <Link to="/" className="back-song">Back to Song</Link>
       </div>
     );  
   }
