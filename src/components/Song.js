@@ -2,6 +2,7 @@ import React from 'react';
 import './Song.css';
 import Lyrics from './Lyrics'
 import Progression from './Progression'
+import Error from './Error'
 
 const Song = ({ lyrics, progression, saveSong, playChord }) => {
   if(lyrics && progression){
@@ -15,6 +16,8 @@ const Song = ({ lyrics, progression, saveSong, playChord }) => {
         <button className="save-song" onClick={saveSong}>Save Song</button>
       </div>
     );
+  }else if (lyrics[0] === undefined && !progression) {
+    return <Error />
   }else{
     return (
       <div className="Song">
