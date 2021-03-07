@@ -12,9 +12,9 @@ const Lyrics = ({ lyrics }) => {
         <div className="lyrics-display">{lyricsLines}</div>
         <div className="poetry-deets">
           <p>"{lyrics.title}" by {lyrics.author}</p>
-          <Link to="/poem" >see full poem</Link>
+          <Link className="full-poem-link" to="/poem" >see full poem</Link>
           <br/>
-          <Link to="/user-lyrics">add your own lyrics</Link>
+          <Link className="user-lyrics-button" to="/user-lyrics">add your own lyrics</Link>
         </div>
 
       </div>

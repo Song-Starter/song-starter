@@ -63,7 +63,7 @@ class UserLyrics extends Component {
           value={this.state.lyrics}
           onChange={this.handleChange}/>
         <Link to="/" className="back-song">
-          <button onClick={() => this.props.updateLyrics(this.state)}>Save Lyrics</button>
+          <button className="save-new-lyrics" onClick={() => this.props.updateLyrics(this.state)}>Save Lyrics</button>
         </Link>
         <Link to="/" className="back-song">Back to Song</Link>
       </div>
