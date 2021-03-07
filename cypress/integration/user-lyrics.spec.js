@@ -26,6 +26,19 @@ context('User Lyrics', () => {
       cy.get('textarea').should('have.value', 'yeah yeah yeah\nthats right\nyeah yeah yeah\nthis is song\noh yeah oh yeah')
     })
 
+    it('should be able to add new lyrics to song', () => {
+      cy.get('input[id=user-title]').type('Cool Song Title')
+      cy.get('textarea').type('when I was little{enter}i dreamt of being an astronaut{enter}now I dream of{enter}having a home{enter}and a mortgage')
+      cy.get('button[class=save-new-lyrics]').click()
+    })
 
+    it('should display new lyrics and title when user saves their lyrics', () => {
+      cy.get('input[id=user-title]').type('Super Sad')
+      cy.get('textarea').type('i am a sad boi{enter}this is a sad song{enter}you are a sad boi{enter}the world is a sad place{enter}thank god for  tacos')
+      cy.get('button[class=save-new-lyrics]').click()
+      cy.get('div[class=lyrics-display]').find('p').should('have.length', 4)
+      cy.get('a[class=full-poem-link]').click()
+      cy.get('div[class=poem-display]').find('p').should('have.length', 5)
+    })
   })
 })
