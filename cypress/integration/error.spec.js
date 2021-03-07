@@ -1,8 +1,4 @@
-context('Home Page', () => {
-  beforeEach(() => {
-    
-  })
-
+context('Error page', () => {
   describe('Error', () => {
     it('should display if URL does not exist', () => {
       cy.visit('http://localhost:3000/notarealurl')
