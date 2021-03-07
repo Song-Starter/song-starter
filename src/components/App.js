@@ -7,6 +7,7 @@ import Song from './Song'
 import Poem from './Poem'
 import Saved from './Saved'
 import Header from './Header'
+import UserLyrics from './UserLyrics'
 import Error from './Error'
 import { fetchPoem } from '../network-calls'
 import { sound, soundEngine } from '../sound/sound-functions'
@@ -116,6 +117,7 @@ class App extends Component {
             render={() => {
             return <Poem lyrics={ this.state.lyrics }/>
           }}/>
+          <Route path="/userlyrics" component={ UserLyrics } />
           <Route path="/saved"
             render={() => {
               return <Saved savedArray={ this.state.saved } showSavedSong={this.showSavedSong} deleteSong={this.deleteSong}/>
