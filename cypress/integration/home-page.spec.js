@@ -22,8 +22,6 @@ context('Home Page', () => {
       cy.get('div[class=Song]')
       .find('h1')
       .contains('Let\'s get started!')
-    })
-    it('should NOT display a song on page load', () => {
       cy.get('div[class=Song]')
       .find('p')
       .contains('Choose "Major" or "Minor".')
@@ -50,11 +48,6 @@ context('Home Page', () => {
         .find('div[class=NavBar]')
       cy.get('button[class=new-song-button]').click()
     })
-    it('should display a new song when "New Song" is clicked', () => {
-      cy.get('div[class=Header]')
-        .find('div[class=NavBar]')
-      cy.get('button[class=new-song-button]').click()
-    })
   })
 
   describe('Song display', () => {
@@ -74,12 +67,24 @@ context('Home Page', () => {
       cy.get('div[class=Chord]').contains('notes')
     })
 
-    it.only('should play the chord when it is clicked', () => {
+    it('should play the chord when it is clicked', () => {
       cy.get('button[class=new-song-button]').click()
       cy.get('div[class="Progression"]')
       cy.get('div[class=Chord]').contains('C').click()
       cy.window().should('have.attr', 'Sound')
       cy.window('Howl').trigger('init')
+    })
+
+    it('should ONLY play chords from the selected key signature', () => {
+      cy.get('select[id=key]')
+      .select('D')
+      cy.get('div[class=qual-container]')
+      .find('label')
+      .contains('Minor')
+      .click()
+      cy.get('button[class=new-song-button]').click()
+      cy.get('div[class="Progression"]')
+      cy.get('div[class=Chord]').click({multiple: true})
     })
   })
 })
