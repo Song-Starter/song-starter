@@ -15,13 +15,13 @@ Starting a new song can be hard. Your lyrics feel uninspired. You keep falling i
 
 ## Features
 
-Users can create a song at the click of a button!
-Users can choose which key to write their song in, and choose between major and minor.
-If a user wants to add a little spice, they can opt to use seventh chords!
-A song is generated with four lines of poetry, and a set of four chords.
-Users can play the chords by click on them!
-If a user wishes to, they can view the full poem they were given, OR choose to write their own lyrics.
-Songs can be daved and retrieved at a later date, thanks to local storage.
+- Create a song at the click of a button!
+- Choose which key to write a song in, and choose between major and minor.
+- Want to add a little spice, add seventh chords!
+- A song is generated with four lines of poetry, and a set of four chords.
+- Play the chords by clicking on them!
+- View the full poem, OR write your own lyrics.
+- Songs can be saved and retrieved at a later date, thanks to local storage.
 
 
 ### Categories:
