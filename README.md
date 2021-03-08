@@ -3,9 +3,9 @@
 #### Table of Contents
 - [Introduction](#Introduction)
 - [Features](#Features)
-- [Technologies](#Techologies)
+- [Technologies](#Technologies)
 - [Contributions](#Contributions)
-- [Authors](#Authors)
+- [Author](#Author)
 ---
 ## Introduction
 
