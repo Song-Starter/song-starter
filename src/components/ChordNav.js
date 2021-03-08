@@ -5,7 +5,7 @@ const ChordNav = ({handleChange}) =>{
   return (
     <div className="ChordNav">
       <div className="seventh">
-        <p>7th</p>
+        <p>7th: </p>
         <input 
           type="radio" 
           id="true" 

@@ -53,7 +53,7 @@ h1 {
   margin-right: 2%;
 }
 
-.seventh {
+.seventh, .qual-container {
   display: flex;
   align-items: center;
 }
