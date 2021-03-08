@@ -7,7 +7,7 @@ class NavBar extends Component {
     super(props)
     this.state = {
       key: "C",
-      majmin: "Major",
+      majmin: "major",
       seventh: false
     }
   }

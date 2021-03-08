@@ -52,14 +52,17 @@ class App extends Component {
     const songKey = seventh === 'true' ? Key.chords(`${key} ${majmin}`) : Key.triads(`${key} ${majmin}`)
     let chordArray = []
     chordArray.push(songKey[0])
-    let exclude = []
+    let exclude = 0
     if (majmin === "major") {
-      exclude = [7]
+      exclude = 6
     } else {
-      exclude = [2]
+      exclude = 1
     }
-    for(let i = 0; i < 3; i++) {
-      chordArray.push(songKey[Math.floor(Math.random() * 7)])
+    for(let i = 0; chordArray.length < 4; i++) {
+      const randomNum = Math.floor(Math.random() * 7)
+      if(exclude !== randomNum){
+        chordArray.push(songKey[randomNum])
+      }
     }
     this.setState({
       progression: [chordArray]
