@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css';
 import NavBar from './NavBar'
-import {Link} from 'react-router-dom'
+import {NavLink, Link} from 'react-router-dom'
 
 const Header = ({createNewSong}) => {
   return (
@@ -12,8 +12,14 @@ const Header = ({createNewSong}) => {
       <div className="navigation">
         <NavBar createNewSong={createNewSong} />
         <div className="site-nav">
-            <Link to="/">Home</Link>
-            <Link to="/saved">Saved</Link>
+            <NavLink exact to="/home" activeStyle={{
+                fontWeight: "bold",
+                textDecoration: "underline"
+              }}>Home</NavLink>
+            <NavLink to="/saved" activeStyle={{
+                fontWeight: "bold",
+                textDecoration: "underline"
+              }}>Saved</NavLink>
         </div>
       </div>
     </div>
