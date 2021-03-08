@@ -115,13 +115,37 @@ If a URL path doesn't exist, or a fetch call fails, an error message is displaye
 
 ## Future Iterations
 
-
+- User can search for keywords in the poetry database.
+- User can have automated playback with their chord progression.
+- User can set tempo for chords to play.
+- User can choose to have chords play once, twice, or four times per measure.
+- Service worker to cache sound files and speed up loading.
 
 ## Contributions
 
 Thank you <a href="https://github.com/GreysonElkins/GreysonElkins">Greysong Elkins</a>, for your guidance, advice, and code review.
 
 #### To Contribute
+
+To contribute, or view the file architecture, clone this repo:
+- `git clone git@github.com:DrewBradley/song-starter.git`<br>
+
+Change directories into the root directory:
+- `cd song-starter`<br>
+
+Install dependencies:
+- `npm install`<br>
+
+Create a new branch and name it according to your contribution:
+- `git checkout -b <your-name>/feature/<your-feature-name>`<br>
+
+Check the `package.json` to familiarize yourself with dependencies:
+- `Tonal` and `Howler`<br>
+- `cypress`<br>
+
+To test files, run [cypress.io](https://docs.cypress.io/guides/overview/why-cypress.html#In-a-nutshell)
+- `npm run cypress`
+- When cypress opens, select which test to run. Files should end in `spec.js`.
 
 ## Author
 <table>
