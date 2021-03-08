@@ -24,16 +24,21 @@ class NavBar extends Component {
           <label htmlFor="key">Key</label>
           <select name="key" id="key" onChange={this.handleChange}>
             <option value="C">C</option>
-            <option value="Db">C#/Db</option>
+            <option value="C#">C#</option>
+            <option value="Db">Db</option>
             <option value="D">D</option>
-            <option value="Eb">D#/Eb</option>
+            <option value="D#">D#</option>
+            <option value="Eb">Eb</option>
             <option value="E">E</option>
             <option value="F">F</option>
-            <option value="F#">F#/Gb</option>
+            <option value="F#">F#</option>
+            <option value="Gb">Gb</option>
             <option value="G">G</option>
-            <option value="Ab">G#/Ab</option>
+            <option value="G#">G#</option>
+            <option value="Ab">Ab</option>
             <option value="A">A</option>
-            <option value="Bb">A#/Bb</option>
+            <option value="A#">A#</option>
+            <option value="Bb">Bb</option>
             <option value="B">B</option>
           </select>
         </div>
