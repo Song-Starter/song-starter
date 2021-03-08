@@ -41,6 +41,8 @@ Starting a new song can be hard. Your lyrics feel uninspired. You keep falling i
 
 - [Error Message](#Error-Message)
 
+- [Mobile](#Mobile)
+
 
 #### Home Page
 When the application is opened, a set of instructions is displayed below the header.
@@ -100,6 +102,15 @@ If a URL path doesn't exist, or a fetch call fails, an error message is displaye
 <summary>Error message is displaying!</summary>
 <br>
 <img width="450" alt="Error message being displayed" src="https://user-images.githubusercontent.com/64617435/110261284-d31caf00-7f6c-11eb-84e9-22ae44928995.png">
+</details>
+
+#### Mobile
+Song Start can also be used on mobile devices.
+
+<details>
+<summary>Mobile view!</summary>
+<br>
+<img width="450" alt="Error message being displayed" src="https://media.giphy.com/media/MA7imX21FSCyIuMw9j/giphy.gif">
 </details>
 
 ## Technologies
