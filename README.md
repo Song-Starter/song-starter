@@ -27,15 +27,15 @@ Songs can be daved and retrieved at a later date, thanks to local storage.
 ### Categories:
 - [Home Page](#Home-Page)
 
-- [Song Display](#Song-display)
+- [Song Display](#Song-Display)
 
-- [Saved Songs](#Saved-display)
+- [Saved Songs](#Saved-Display)
 
-- [Full Poem](#Full-poem)
+- [Full Poem](#Full-Poem)
 
-- [User Lyrics](#User-lyrics)
+- [User Lyrics](#User-Lyrics)
 
-- [Error Message](#Error-message)
+- [Error Message](#Error-Message)
 
 
 #### Home Page
@@ -47,7 +47,7 @@ When the application is opened, a set of instructions is displayed below the hea
   <img width="450" alt="Screen Shot 2021-03-07 at 5 11 11 PM" src="https://user-images.githubusercontent.com/64617435/110260137-3ce68a00-7f68-11eb-95a9-19333b1deb8e.png">
 </details>
 
-#### Song Displey
+#### Song Display
 A user can select a key, choose major or minor, or to display 'seventh' chords.
 When a user clicks "New Song" a song with four lines of poetry, and four chords in the chosen key, are displayed.
 A user can even click on each chord, to hear it!
@@ -58,7 +58,7 @@ A user can even click on each chord, to hear it!
 <img width="450" alt="The song display with lyrics and chords" src="https://media.giphy.com/media/EPOJoOJFQ1DHW6BlUT/giphy.gif">
 </details>
 
-#### Saved Songs
+#### Saved Display
 If a user likes what they've made, they can click on "Save Song".
 Saved songs are displayed on the "Saved Songs" page.
 A user can choose to view the song in it's intirety just by clicking "Show Song".
@@ -84,9 +84,9 @@ Users can choose to add their own lyrics by clicking on 'add your own lyrics'.
 These lyrics can be added to their song, and will be saved with the chord progression."
 
 <details>
-<summary>Full poem being displays</summary>
+<summary>User adding new lyrics</summary>
 <br>
-<img width="450" alt="Full poem being displays" src="https://media.giphy.com/media/RiJq7CbKue5Na5PZ4r/giphy.gif">
+<img width="450" alt="User adding new lyrics" src="https://media.giphy.com/media/RiJq7CbKue5Na5PZ4r/giphy.gif">
 </details>
 
 #### Error Message
