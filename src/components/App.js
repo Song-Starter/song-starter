@@ -48,12 +48,8 @@ class App extends Component {
     })
   }
 
-  showHideSeventhsOption = () => {
-    document.querySelector('.ChordNav').classList.toggle('hidden')
-  }
-
   getChordProgression = (key, majmin, seventh) => {
-    const songKey = seventh ? Key.chords(`${key} ${majmin}`) : Key.triads(`${key} ${majmin}`)
+    const songKey = seventh === 'true' ? Key.chords(`${key} ${majmin}`) : Key.triads(`${key} ${majmin}`)
     let chordArray = []
     chordArray.push(songKey[0])
     for(let i = 0; i < 3; i++) {
@@ -111,7 +107,7 @@ class App extends Component {
   render(){
     return (
       <div className="App">
-        <Header createNewSong={this.createNewSong} showHideSeventhsOption={this.showHideSeventhsOption}/>
+        <Header createNewSong={this.createNewSong}/>
         <Switch>
           <Route exact path="/">
             <Redirect to="/home"/>
