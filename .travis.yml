@@ -19,5 +19,5 @@ install:
   - npm ci
 script:
   - npm run start:ci &
-  - npm run cy:run -- --record
+  - npm run cy:run -- --record --key a6f754d5-999f-4710-ba66-17f075071e70
   - kill $(jobs -p) || true
