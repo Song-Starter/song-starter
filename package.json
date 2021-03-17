@@ -23,8 +23,7 @@
     "eject": "react-scripts eject",
     "cypress": "cypress open",
     "cy:run": "cypress run",
-    "cy:run:record": "cypress run --record"
-  },
+    "cy:run:record": "cypress run --record --key a6f754d5-999f-4710-ba66-17f075071e70"},
   "eslintConfig": {
     "extends": [
       "react-app",
