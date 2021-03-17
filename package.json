@@ -16,10 +16,14 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "start:ci": "serve --no-clipboard --listen ${PORT:-8080}",
+    "start:ci:windows": "serve --no-clipboard --listen 8080",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "cypress": "cypress open"
+    "cypress": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run:record": "cypress run --record"
   },
   "eslintConfig": {
     "extends": [

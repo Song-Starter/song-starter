@@ -15,6 +15,8 @@ cache:
   override:
     - npm ci
     - npm run cy:verify
+install:
+  - npm ci
 script:
   - npm run start:ci &
   - npm run cy:run -- --record
