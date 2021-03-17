@@ -10,8 +10,14 @@ addons:
 cache:
   npm: true
   directories:
+    - ~/.npm
     - ~/.cache
+  override:
+    - npm ci
+    - npm run cy:verify
 install:
   - npm ci
 script:
-  - $(npm bin)/cypress run --record
+  - npm run start:ci &
+  - npm run cy:run -- --record
+  - kill $(jobs -p) || true
