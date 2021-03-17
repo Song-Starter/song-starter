@@ -1,0 +1,11 @@
+cache:
+  npm: true
+  directories:
+    - ~/.cache
+install:
+  - npm ci
+  - npm run build
+before_script:
+  - npm start -- --silent &
+script:
+  - $(npm build)/cypress run
