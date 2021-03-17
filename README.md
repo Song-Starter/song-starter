@@ -3,9 +3,9 @@
 #### Table of Contents
 - [Introduction](#Introduction)
 - [Features](#Features)
-- [Technologies](#Techologies)
+- [Technologies](#Technologies)
 - [Contributions](#Contributions)
-- [Authors](#Authors)
+- [Author](#Author)
 ---
 ## Introduction
 
@@ -113,7 +113,7 @@ Song Start can also be used on mobile devices.
 <img width="450" alt="Error message being displayed" src="https://media.giphy.com/media/MA7imX21FSCyIuMw9j/giphy.gif">
 </details>
 
-## Technologies
+#### Technologies
 - React
 - [TonalJS](https://github.com/tonaljs/v2)
 - [PoetryDB](https://github.com/thundercomb/poetrydb/blob/master/README.md)
@@ -132,9 +132,9 @@ Song Start can also be used on mobile devices.
 - User can choose to have chords play once, twice, or four times per measure.
 - Service worker to cache sound files and speed up loading.
 
-## Contributions
+#### Contributions
 
-Thank you <a href="https://github.com/GreysonElkins/GreysonElkins">Greysong Elkins</a>, for your guidance, advice, and code review.
+Thank you <a href="https://github.com/GreysonElkins/GreysonElkins">Greyson Elkins</a>, for your guidance, advice, and code review.
 
 #### To Contribute
 
