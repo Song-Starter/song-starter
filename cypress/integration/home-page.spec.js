@@ -1,11 +1,7 @@
 context('Home Page', () => {
   beforeEach(() => {
-    cy.intercept(
-      {method: 'GET',
-        url: 'poetrydb.org/random/1/title,lines,author', 
-      },
-      [{ fixture: 'response.json' }]
-    )
+    cy.intercept('poetrydb.org/random/1/title,lines,author', { fixture: 'response.json' }
+    ).as('poem')
     cy.intercept(
       {method: 'GET',
         url: 'http://localhost:3000/static/media/pianosprite.151ac733.mp3', 
@@ -65,6 +61,7 @@ context('Home Page', () => {
   describe('Song display', () => {
     it('should display a song after "New Song" is clicked', () => {
       cy.get('button[class=new-song-button]').click()
+      cy.wait('@poem')
       cy.get('div[class="Song"]').find('div[class="Lyrics"]').contains('see full poem')
     })
 

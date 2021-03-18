@@ -1,10 +1,6 @@
 context('API call', () => {
   beforeEach(() => {
-    cy.intercept(
-      {method: 'GET',
-        url: 'poetrydb.org/random/1/title,lines,author', 
-      },
-      [{ fixture: 'response.json' }]
+    cy.intercept('poetrydb.org/random/1/title,lines,author', { fixture: 'response.json' }
     )
     cy.intercept(
       {method: 'GET',

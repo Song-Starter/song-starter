@@ -1,5 +1,7 @@
 context('Poem page', () => {
   beforeEach(() => {
+    cy.intercept('poetrydb.org/random/1/title,lines,author', { fixture: 'response.json' }
+    )
     cy.visit('http://localhost:3000/')
   })
 
