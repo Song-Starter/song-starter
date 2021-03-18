@@ -1,5 +1,17 @@
 context('Home Page', () => {
   beforeEach(() => {
+    cy.intercept(
+      {method: 'GET',
+        url: 'poetrydb.org/random/1/title,lines,author', 
+      },
+      [{ fixture: 'response.json' }]
+    )
+    cy.intercept(
+      {method: 'GET',
+        url: 'http://localhost:3000/static/media/pianosprite.151ac733.mp3', 
+      },
+      [{ fixture: 'response.json' }]
+    )
     cy.visit('http://localhost:3000/')
   })
 
