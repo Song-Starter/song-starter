@@ -16,3 +16,5 @@ const ChordDiagram = (props) => {
 }
 
 export default ChordDiagram;
+
+// https://www.npmjs.com/package/svguitar
