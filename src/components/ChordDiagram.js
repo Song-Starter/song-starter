@@ -1,11 +1,12 @@
 import React from 'react';
 import { Chord as cord } from 'tonal';
+import { SVGuitarChord } from 'svguitar'
 import './Chord.css';
 
-const Chord = (props) => {
+const ChordDiagram = (props) => {
   const chordNotes = cord.notes(props.name).map(note => <p key={note} className="single-note">{note}</p>)
   return (
-    <div className="Chord" onClick={() => props.playChord(props.name)}>
+    <div className="ChordDiagram" onClick={() => props.playChord(props.name)}>
       <p className="chord-name">{props.name}</p>
       <p className="note-label">notes</p>
       <div className="chord-notes">{chordNotes}</div>
@@ -14,4 +15,4 @@ const Chord = (props) => {
   );
 }
 
-export default Chord;
+export default ChordDiagram;
