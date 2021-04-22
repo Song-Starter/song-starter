@@ -42,10 +42,20 @@
   margin: 5% 0;
 }
 
-.chord-chart {
-  z-index: 10;
-  height: 100px;
-  width: 100px;
+.Chord .chord-chart {
+  margin: -10% 0 auto 12%;
+  height: 150px;
+  visibility: hidden;
+  background-color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.Chord:hover .chord-chart {
+  visibility: visible;
 }
 
 @media screen and (max-width: 600px){
