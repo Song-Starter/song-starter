@@ -17,7 +17,7 @@ const Chord = (props) => {
   console.log(charts[props.name+'.png'])
   return (
     <div className="Chord" onClick={() => props.playChord(props.name)}>
-      <img className="chord-chart" src={charts[props.name+'.png'].default} />
+      <img className="chord-chart" src={charts[props.name+'.png']} />
       <p className="chord-name">{props.name}</p>
       <p className="note-label">notes</p>
       <div className="chord-notes">{chordNotes}</div>
