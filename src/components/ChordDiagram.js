@@ -1,6 +1,5 @@
 import React from 'react';
 import { Chord as cord } from 'tonal';
-import { SVGuitarChord } from 'svguitar'
 import './Chord.css';
 
 const ChordDiagram = (props) => {
