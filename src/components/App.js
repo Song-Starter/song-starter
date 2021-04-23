@@ -10,6 +10,7 @@ import Header from './Header'
 import UserLyrics from './UserLyrics'
 import Error from './Error'
 import { fetchPoem } from '../network-calls'
+import { postSong } from '../api-calls'
 import { sound, soundEngine } from '../sound/sound-functions'
 
 class App extends Component {
@@ -84,6 +85,7 @@ class App extends Component {
     })
     const json = JSON.stringify(this.state.saved)
     localStorage.setItem('saved', json)
+    postSong(songObj)
   }
 
   deleteSong = (index) => {
