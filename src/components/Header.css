@@ -7,10 +7,11 @@ h1 {
 }
 
 .title {
-  font-family: 'Amatic SC', cursive, sans-serif;
+  font-family: 'Bebas Neue', cursive, sans-serif;
   font-size: 5vw;
   grid-area: 1 / 1 / 2 / 2 ;
   text-align: center;
+  margin: 0.25em;
 }
 
 .Header {

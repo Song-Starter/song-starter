@@ -7,7 +7,7 @@ const Header = ({createNewSong}) => {
   return (
     <div className="Header">
       <Link to="/">
-        <h1 className="title">Song Starter</h1>
+        <h1 className="title">SongStarter</h1>
       </Link>
       <div className="navigation">
         <NavBar createNewSong={createNewSong} />
